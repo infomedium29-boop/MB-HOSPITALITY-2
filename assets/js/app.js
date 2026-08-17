@@ -41,7 +41,7 @@
       'approachPage.title':'Unser Ansatz | MB Hospitality & Management','approachPage.meta':'Hands-on On-site Hospitality Consulting: Observe, Understand, Feedback, Implementation und Follow-up.','approachPage.eyebrow':'Unser Ansatz','approachPage.hero':'Wir beraten nicht nur. <span class="gold">Wir arbeiten direkt in Ihrem Betrieb.</span>','approachPage.lead':'Der wichtigste Teil unserer Arbeit beginnt erst, wenn wir in den echten Rhythmus Ihres Betriebs eintreten.','approachPage.principle':'Unser Prinzip','approachPage.principleTitle':'Was im Standard steht und was der Gast erlebt, muss dieselbe Sache sein.','approachPage.principleText':'Deshalb beobachten wir, was unter Druck passiert: wenn das Restaurant voll ist, ein Gast ein Problem hat, die Kommunikation zwischen Abteilungen stockt oder Qualität von einzelnen Personen abhängt. Genau dort beginnt echte Verbesserung.','approachPage.teamTitle':'Feedback ist nicht das Ende. Es ist der Beginn der Entwicklung.','approachPage.teamText':'Wir arbeiten mit Management und Mitarbeitenden. Feedback wird zu Training, Praxis und klaren Gewohnheiten, die in jeder Schicht wiederholbar sind.','approachPage.loop':'Beobachten → Feedback → Trainieren → Verbessern',
       'experiencePage.title':'Erfahrung | MB Hospitality & Management','experiencePage.meta':'15+ Jahre professionelle Erfahrung in Hotellerie und Gastronomie, F&B Management, Pre-Opening, Training und Entwicklung von Hospitality Operations.','experiencePage.eyebrow':'Erfahrung','experiencePage.hero':'15+ Jahre zwischen Standards, Menschen und <span class="gold">echter Operation.</span>','experiencePage.lead':'Das Wissen von MB Hospitality & Management kommt aus langjähriger Arbeit in Hotellerie und Gastronomie — aus operativen Situationen, Eröffnungen, F&B, Teamentwicklung und Service Standards.','experiencePage.context':'Professioneller Kontext','experiencePage.contextTitle':'Erfahrung, die nicht in der Theorie entstanden ist.','experiencePage.contextText':'Der heutige Fokus wurde über Jahre direkter Hospitality-Arbeit aufgebaut: Führung von F&B Operations, Restaurant- und Barentwicklung, Pre-Opening und Opening, Teamtraining, Service-Standardisierung und Business Development.','experiencePage.clarity':'Wichtiger Hinweis','experiencePage.clarityText':'Frühere Arbeitgeber, Betriebe und Projekte aus früheren Positionen werden nicht als Kunden von MB Hospitality & Management dargestellt. Sie gehören zur professionellen Erfahrung, auf der der heutige Ansatz basiert.','experiencePage.values':'Praxis. Standard. Menschen. Ergebnis.',
       'contactPage.title':'Kontakt | MB Hospitality & Management','contactPage.meta':'Kontaktieren Sie MB Hospitality & Management für On-site Hospitality Consulting, Training und Operational Development in Vorarlberg und der Alpenregion.','contactPage.eyebrow':'Kontakt','contactPage.hero':'Sprechen wir darüber, was in Ihrer Operation <span class="gold">wirklich passiert.</span>','contactPage.lead':'Hotel, Restaurant oder Bar — beginnen wir mit Ihrem Ist-Zustand, Ihren Zielen und Prioritäten.','contactPage.side':'Das erste Gespräch kann einfach sein: Wo stehen Sie heute, was möchten Sie verbessern und wo verliert die Operation aktuell Qualität oder Energie?','contactPage.region':'Einsatzgebiet','contactPage.regionText':'Vorarlberg · Österreich · Alpenregion und Projekte nach Vereinbarung','form.name':'Vor- und Nachname','form.company':'Hotel / Restaurant / Unternehmen','form.email':'E-Mail','form.phone':'Telefon','form.type':'Art des Betriebs','form.typeOption':'Auswählen','form.hotel':'Hotel','form.restaurant':'Restaurant','form.bar':'Bar','form.other':'Andere','form.message':'Beschreiben Sie kurz, was Sie verbessern möchten','form.submit':'Anfrage senden','form.note':'Das Kontaktformular ist technisch für die Verbindung mit einem Versanddienst vorbereitet.','form.demo':'Das Formular ist noch nicht mit einem E-Mail-Dienst verbunden. Bitte vor Veröffentlichung den Web3Forms Access Key in assets/js/config.js eintragen.',
-      'privacy.title':'Datenschutz | MB Hospitality & Management','privacy.eyebrow':'Rechtliche Informationen','privacy.hero':'Datenschutzerklärung','privacy.updated':'Aktualisiert: August 2026.','privacy.p1':'Diese Website verarbeitet nur Daten, die Besucher freiwillig über das Kontaktformular eingeben, sobald das Formular mit einem Versanddienst verbunden ist.','privacy.h2':'Daten des Kontaktformulars','privacy.p2':'Dazu können Name, Betrieb oder Unternehmen, E-Mail, Telefon, Betriebsart und Nachricht gehören. Sie werden ausschließlich zur Beantwortung der Anfrage und zur geschäftlichen Kommunikation verwendet.','privacy.h3':'Lokale Einstellungen','privacy.p3':'Die Website kann localStorage oder sessionStorage verwenden, um Sprache, Status der Intro-Animation und grundlegende Anzeigepräferenzen zu speichern. Diese Daten werden nicht für Werbung genutzt.','privacy.h4':'Externe Inhalte','privacy.p4':'Bilder können über externe Bildinfrastruktur ausgeliefert werden. Vor der finalen Veröffentlichung sollten externe Dienste, Analytics und Formulare entsprechend der tatsächlichen Konfiguration geprüft werden.','privacy.h5':'Kontakt','privacy.p5':'Angaben zum Verantwortlichen und die offizielle Kontakt-E-Mail sind vor der finalen Veröffentlichung zu ergänzen.',
+      'privacy.title':'Datenschutz | MB Hospitality & Management','privacy.eyebrow':'Rechtliche Informationen','privacy.hero':'Datenschutzerklärung','privacy.updated':'Aktualisiert: August 2026.','privacy.p1':'Diese Website verarbeitet nur Daten, die Besucher freiwillig über das Kontaktformular eingeben, sobald das Formular mit einem Versanddienst verbunden ist.','privacy.h2':'Daten des Kontaktformulars','privacy.p2':'Dazu können Name, Betrieb oder Unternehmen, E-Mail, Telefon, Betriebsart und Nachricht gehören. Sie werden ausschließlich zur Beantwortung der Anfrage und zur geschäftlichen Kommunikation verwendet.','privacy.h3':'Lokale Einstellungen','privacy.p3':'Die Website kann localStorage oder sessionStorage verwenden, um Sprache, Status der Intro-Animation und grundlegende Anzeigepräferenzen zu speichern. Diese Daten werden nicht für Werbung genutzt.','privacy.h4':'Externe Inhalte','privacy.p4':'Bilder können über eine externe Bildinfrastruktur ausgeliefert werden. Vor der finalen Veröffentlichung sollten alle externen Dienste, Analysewerkzeuge und Formulare entsprechend der tatsächlichen Website-Konfiguration geprüft werden.','privacy.h5':'Kontakt','privacy.p5':'Angaben zum Verantwortlichen und die offizielle Kontakt-E-Mail sind vor der finalen Veröffentlichung zu ergänzen.',
       'cookie.text':'Wir verwenden nur grundlegende lokale Einstellungen für Sprache und Seitenerlebnis. In dieser Version gibt es keine Marketing-Cookies.','cookie.ok':'OK','cookie.more':'Datenschutz'
     },
     en: {
@@ -67,6 +67,130 @@
     }
   };
 
+
+  // Complete language overrides: every visible label follows the selected language.
+  Object.assign(T.hr, {
+    'common.alpine':'Alpsko hotelijerstvo',
+    'footer.copy':'Operativno savjetovanje, trening i poslovni razvoj u hotelijerstvu i gastronomiji — izravno u vašem objektu.',
+    'home.meta':'Premium savjetovanje na lokaciji, upravljanje, trening i poslovni razvoj za hotele, restorane i barove u Vorarlbergu i alpskoj regiji.',
+    'hero.eyebrow':'Vorarlberg · Alpsko hotelijerstvo',
+    'hero.sub':'Upravljanje, trening i poslovni razvoj na lokaciji za hotele, restorane i barove koji žele standarde pretvoriti u stvarno iskustvo gosta.',
+    'statement.side':'Hotelijerstvo i gastronomija ne poboljšavaju se kroz izvještaje. Poboljšanje se događa tamo gdje se usluga stvarno pruža.',
+    'statement.quote':'Standardi na papiru nisu dovoljni. <em>Gledamo kako funkcioniraju u stvarnosti.</em>',
+    'diff.eyebrow':'Pristup na lokaciji',
+    'diff.p1':'Ulazimo u svakodnevni ritam hotela, restorana ili bara. Promatramo tim, komunikaciju, uslugu, organizaciju, vodstvo i cijeli put gosta — upravo u uvjetima u kojima gost doživljava vaš brend.',
+    'diff.p2':'Nakon toga dajemo konkretne povratne informacije, zajedno uvodimo promjene i pratimo rade li u praksi. Cilj nije još jedan dokument. Cilj je bolji rad, snažniji tim i bolje iskustvo gosta.',
+    'diff.li2':'Povratne informacije vodstvu i timu',
+    'diff.li3':'Provedba, trening i praćenje rezultata',
+    'process.title':'Promatraj. Razumij. Poboljšaj.',
+    'process.1t':'Analiza na lokaciji',
+    'process.2t':'Promatranje',
+    'process.2p':'Promatramo svakodnevni rad, tim, uslugu, vodstvo i cijeli put gosta.',
+    'process.3t':'Povratne informacije',
+    'process.3p':'Dajemo konkretne, objektivne i primjenjive povratne informacije vodstvu i zaposlenicima.',
+    'process.4t':'Provedba',
+    'process.5t':'Praćenje',
+    'journey.eyebrow':'Put gosta',
+    'services.title':'Operativna podrška tamo gdje gostoprimstvo postaje stvarno iskustvo.',
+    'service.1t':'F&B upravljanje i operacije',
+    'service.1p':'Struktura, organizacija, tijek rada, kvaliteta usluge i operativna učinkovitost restorana i barova.',
+    'service.2t':'Priprema i otvaranje objekta',
+    'service.3t':'Standardi usluge',
+    'service.4t':'Trening i razvoj tima',
+    'service.4p':'Praktičan trening, povratne informacije i razvoj zaposlenika koji svakodnevno stvaraju iskustvo gosta.',
+    'service.5t':'Razvoj restorana i bara',
+    'service.5p':'Razvoj koncepta, ponude, tijeka rada, programa pića i pozicioniranja F&B operacije.',
+    'service.6t':'Poslovni razvoj',
+    'service.6p':'Operativni pogled na prilike za rast, kvalitetu, profitabilnost i dugoročnu vrijednost ugostiteljskog objekta.',
+    'exp.title':'Iskustvo koje dolazi iz prakse.',
+    'exp.lead':'Više od 15 godina profesionalnog iskustva u hotelijerstvu i gastronomiji — od F&B operacija i otvaranja objekata do razvoja standarda, timova i novih ugostiteljskih koncepata.',
+    'exp.f1':'F&B upravljanje i operacije','exp.f2':'Priprema i otvaranje objekta','exp.f3':'Razvoj restorana i bara','exp.f4':'Standardi usluge','exp.f5':'Trening i razvoj tima','exp.f6':'Koncepti pića i bara','exp.f7':'Poslovni razvoj','exp.f8':'Iskustvo gosta',
+    'gallery.eyebrow':'Alpsko hotelijerstvo',
+    'gallery.lead':'Vizualni svijet MB Hospitality & Management povezuje elegantnu gastronomiju, stvarni rad ljudi i karakter alpskog hotelijerstva.',
+    'ig.text':'Mjesto za buduće projekte, stručne uvide, operativne detalje i priče iz Vorarlberga i alpske regije.',
+    'servicesPage.meta':'Usluge na lokaciji: F&B upravljanje, priprema i otvaranje objekata, standardi usluge, trening, razvoj restorana i barova te poslovni razvoj.',
+    'servicesPage.lead':'Radimo tamo gdje se rezultat stvarno vidi: u procesu, u prostoru usluge, u timu i u iskustvu gosta.',
+    'servicesPage.r1':'Operativna analiza F&B-a, tijeka rada, organizacije smjene, odgovornosti, usluge i komunikacije. Fokus je na izvedivim promjenama, kvaliteti i dosljednosti.',
+    'servicesPage.r2':'Planiranje i priprema ljudi, standarda, operativnih procedura, tijeka usluge i F&B operacije prije otvaranja. Podrška i tijekom prvih operativnih dana.',
+    'servicesPage.r3':'Razvoj standarda koje zaposlenik može razumjeti, vodstvo pratiti, a gost osjetiti. Testiramo ih u stvarnim situacijama i pod pritiskom.',
+    'servicesPage.r4':'Trening na radnom mjestu, mentoriranje i konkretne povratne informacije. Ne samo prezentacije — radimo s timom u situacijama koje se događaju svaki dan.',
+    'servicesPage.r5':'Koncept, logika jelovnika, program pića i bara, model usluge, organizacija prostora i operativni detalji koji oblikuju F&B proizvod.',
+    'servicesPage.r6':'Prepoznavanje potencijala za poboljšanje prihoda, kvalitete, pozicioniranja, iskustva gosta i učinkovitosti operacije.',
+    'servicesPage.o3':'Bolji put gosta','servicesPage.o5':'Mjerljivo praćenje rezultata',
+    'approachPage.meta':'Praktičan rad na lokaciji: promatranje, razumijevanje, povratne informacije, provedba i praćenje.',
+    'approachPage.teamTitle':'Povratna informacija nije kraj. To je početak razvoja.',
+    'approachPage.teamText':'Radimo s vodstvom i zaposlenicima. Povratne informacije pretvaramo u trening, praksu i jasne navike koje se mogu ponoviti u svakoj smjeni.',
+    'approachPage.loop':'Promatraj → Povratne informacije → Treniraj → Poboljšaj',
+    'experiencePage.meta':'15+ godina profesionalnog iskustva u hotelijerstvu i gastronomiji, F&B upravljanju, otvaranju objekata, treningu i razvoju operacija.',
+    'experiencePage.hero':'15+ godina između standarda, ljudi i <span class="gold">stvarnog operativnog rada.</span>',
+    'experiencePage.lead':'Znanje MB Hospitality & Management dolazi iz dugogodišnjeg rada u hotelijerstvu i gastronomiji — iz operativnih situacija, otvaranja, F&B-a, razvoja timova i standarda usluge.',
+    'experiencePage.contextText':'Fokus je izgrađen kroz godine neposrednog rada u hotelijerstvu i gastronomiji: vođenje F&B operacija, razvoj restorana i barova, pripremu i otvaranje objekata, trening ljudi, standardizaciju usluge i poslovni razvoj.',
+    'contactPage.meta':'Kontaktirajte MB Hospitality & Management za savjetovanje na lokaciji, trening i operativni razvoj u Vorarlbergu i alpskoj regiji.',
+    'contactPage.hero':'Razgovarajmo o tome što se <span class="gold">stvarno događa u vašem poslovanju.</span>',
+    'contactPage.side':'Prvi razgovor može biti jednostavan: gdje ste danas, što želite poboljšati i gdje poslovanje trenutačno gubi kvalitetu ili energiju.',
+    'privacy.p4':'Fotografije se mogu isporučivati putem vanjske infrastrukture za slike. Prije konačne objave preporučuje se provjeriti sve vanjske servise, analitičke alate i obrasce prema stvarnoj konfiguraciji web stranice.',
+    'footer.f1':'F&B operacije','footer.f2':'Trening','footer.f3':'Standardi usluge','footer.f4':'Priprema otvaranja',
+    'serviceCat.1':'01 / Operacije','serviceCat.2':'02 / Otvaranje','serviceCat.3':'03 / Standardi','serviceCat.4':'04 / Ljudi','serviceCat.5':'05 / F&B','serviceCat.6':'06 / Razvoj',
+    'loop.observe':'Promatraj','loop.feedback':'Povratne informacije','loop.train':'Treniraj','loop.improve':'Poboljšaj',
+    'aria.nav':'Glavna navigacija','aria.language':'Odabir jezika','aria.menu':'Izbornik',
+    'alt.team':'Ugostiteljski tim u radu','alt.alpineHotel':'Luksuzni alpski hotel','alt.premiumBar':'Premium bar','alt.fineDining':'Vrhunska gastronomija','alt.restaurant':'Elegantni restoran','alt.operations':'Operativni rad u ugostiteljstvu','alt.hotelLobby':'Hotelski predvorje','alt.barOperations':'Rad premium bara','alt.diningDetail':'Detalj vrhunske gastronomije','alt.teamService':'Tim i usluga','alt.serviceStandards':'Standardi usluge',
+    'form.success':'Hvala. Vaš upit je poslan.','form.error':'Poruka se nije mogla poslati. Pokušajte ponovno kasnije.','form.subject':'MB Hospitality & Management — novi upit',
+    'notfound.title':'404 | MB Hospitality & Management','notfound.message':'Stranica nije pronađena','notfound.back':'Povratak na početnu'
+  });
+
+  Object.assign(T.de, {
+    'common.alpine':'Alpine Hotellerie',
+    'footer.copy':'Operative Beratung, Training und Geschäftsentwicklung für Hotellerie und Gastronomie — direkt in Ihrem Betrieb.',
+    'home.meta':'Premium Vor-Ort-Beratung, Management, Training und Geschäftsentwicklung für Hotels, Restaurants und Bars in Vorarlberg und der Alpenregion.',
+    'hero.eyebrow':'Vorarlberg · Alpine Hotellerie',
+    'hero.sub':'Vor-Ort-Management, Training und Geschäftsentwicklung für Hotels, Restaurants und Bars, die Standards in ein spürbares Gästeerlebnis verwandeln wollen.',
+    'statement.side':'Hotellerie und Gastronomie verbessern sich nicht in einem Bericht. Verbesserung entsteht dort, wo Service tatsächlich stattfindet.',
+    'statement.quote':'Standards auf dem Papier reichen nicht. <em>Wir sehen uns an, wie sie in der Realität funktionieren.</em>',
+    'diff.eyebrow':'Vor-Ort-Ansatz',
+    'diff.title':'Wir kommen nicht nur zur Analyse. Wir arbeiten direkt in Ihrem Betrieb.',
+    'diff.p1':'Wir gehen direkt in den Alltag Ihres Hotels, Restaurants oder Ihrer Bar. Wir beobachten Team, Kommunikation, Service, Organisation, Führung und die gesamte Gästereise — genau unter den Bedingungen, in denen Ihr Gast Ihre Marke erlebt.',
+    'diff.p2':'Danach geben wir konkrete Rückmeldungen, setzen Veränderungen gemeinsam um und prüfen, wie sie im Alltag funktionieren. Das Ziel ist kein weiterer Bericht. Das Ziel sind bessere Abläufe, ein stärkeres Team und ein besseres Gästeerlebnis.',
+    'diff.li2':'Rückmeldung für Führung und Team','diff.li3':'Umsetzung, Training und Ergebniskontrolle',
+    'process.title':'Beobachten. Verstehen. Verbessern.',
+    'process.1t':'Analyse vor Ort','process.2t':'Beobachtung','process.2p':'Wir beobachten Arbeitsalltag, Team, Service, Führung und die gesamte Gästereise.','process.3t':'Rückmeldung','process.3p':'Wir geben konkrete, objektive und umsetzbare Rückmeldungen an Führung und Mitarbeitende.','process.4t':'Umsetzung','process.5t':'Nachverfolgung',
+    'journey.eyebrow':'Gästereise',
+    'services.title':'Operative Unterstützung dort, wo Gastlichkeit zum echten Erlebnis wird.',
+    'service.1t':'F&B-Management und Betrieb','service.1p':'Struktur, Organisation, Arbeitsabläufe, Servicequalität und operative Effizienz in Restaurants und Bars.','service.2t':'Vorbereitung und Eröffnung','service.3t':'Servicestandards','service.4t':'Training und Teamentwicklung','service.4p':'Praxisnahes Training, Rückmeldung und Entwicklung der Mitarbeitenden, die täglich das Gästeerlebnis prägen.','service.5t':'Restaurant- und Barentwicklung','service.5p':'Entwicklung von Konzept, Angebot, Arbeitsabläufen, Getränkeprogramm und Positionierung des F&B-Betriebs.','service.6t':'Geschäftsentwicklung','service.6p':'Operativer Blick auf Chancen für Wachstum, Qualität, Profitabilität und langfristigen Wert des Betriebs.',
+    'exp.title':'Erfahrung, die aus der Praxis kommt.','exp.lead':'Mehr als 15 Jahre Berufserfahrung in Hotellerie und Gastronomie — von F&B-Betrieb und Eröffnungen bis zur Entwicklung von Standards, Teams und neuen Gastgewerbekonzepten.','exp.f1':'F&B-Management und Betrieb','exp.f2':'Vorbereitung und Eröffnung','exp.f3':'Restaurant- und Barentwicklung','exp.f4':'Servicestandards','exp.f5':'Training und Teamentwicklung','exp.f6':'Getränke- und Barkonzepte','exp.f7':'Geschäftsentwicklung','exp.f8':'Gästeerlebnis',
+    'gallery.eyebrow':'Alpine Hotellerie','gallery.lead':'Die Bildwelt von MB Hospitality & Management verbindet elegante Gastronomie, echte Arbeit mit Menschen und den Charakter alpiner Hotellerie.',
+    'ig.text':'Raum für zukünftige Projekte, Fachimpulse, operative Details und Geschichten aus Vorarlberg und der Alpenregion.',
+    'servicesPage.meta':'Vor-Ort-Leistungen: F&B-Management, Vorbereitung und Eröffnung, Servicestandards, Training, Restaurant- und Barentwicklung sowie Geschäftsentwicklung.','servicesPage.lead':'Wir arbeiten dort, wo Ergebnisse wirklich sichtbar werden: in Abläufen, im Servicebereich, im Team und im Gästeerlebnis.','servicesPage.r1':'Operative Analyse von F&B, Arbeitsabläufen, Schichtorganisation, Verantwortlichkeiten, Service und Kommunikation. Der Fokus liegt auf umsetzbaren Veränderungen, Qualität und Beständigkeit.','servicesPage.r2':'Planung und Vorbereitung von Mitarbeitenden, Standards, operativen Abläufen, Servicefluss und F&B-Betrieb vor der Eröffnung. Unterstützung auch während der ersten Betriebstage.','servicesPage.r3':'Entwicklung von Standards, die Mitarbeitende verstehen, Führungskräfte verfolgen und Gäste spüren können. Wir testen sie in realen Situationen und unter Druck.','servicesPage.r4':'Training am Arbeitsplatz, Coaching und konkrete Rückmeldung. Nicht nur Präsentationen — wir arbeiten mit dem Team in Situationen, die jeden Tag tatsächlich entstehen.','servicesPage.r5':'Konzept, Menülogik, Getränke- und Barprogramm, Servicemodell, Raumorganisation und operative Details, die das F&B-Angebot prägen.','servicesPage.r6':'Erkennen von Potenzialen zur Verbesserung von Umsatz, Qualität, Positionierung, Gästeerlebnis und operativer Effizienz.','servicesPage.o3':'Bessere Gästereise','servicesPage.o5':'Messbare Ergebniskontrolle',
+    'approachPage.meta':'Praxisnahe Vor-Ort-Arbeit: beobachten, verstehen, rückmelden, umsetzen und nachverfolgen.','approachPage.hero':'Wir beraten nicht nur. <span class="gold">Wir arbeiten direkt in Ihrem Betrieb.</span>','approachPage.teamText':'Wir arbeiten mit Führungskräften und Mitarbeitenden. Rückmeldungen werden zu Training, Praxis und klaren Routinen, die sich in jeder Schicht wiederholen lassen.','approachPage.loop':'Beobachten → Rückmelden → Trainieren → Verbessern',
+    'experiencePage.meta':'15+ Jahre Berufserfahrung in Hotellerie und Gastronomie, F&B-Management, Betriebseröffnungen, Training und operativer Entwicklung.','experiencePage.hero':'15+ Jahre zwischen Standards, Menschen und <span class="gold">echtem Betriebsalltag.</span>','experiencePage.lead':'Das Wissen von MB Hospitality & Management stammt aus langjähriger Arbeit in Hotellerie und Gastronomie — aus operativen Situationen, Eröffnungen, F&B, Teamentwicklung und Servicestandards.','experiencePage.contextText':'Der heutige Fokus entstand über Jahre direkter Arbeit in Hotellerie und Gastronomie: Führung von F&B-Betrieben, Restaurant- und Barentwicklung, Vorbereitung und Eröffnung, Mitarbeitertraining, Standardisierung des Service und Geschäftsentwicklung.',
+    'contactPage.meta':'Kontaktieren Sie MB Hospitality & Management für Vor-Ort-Beratung, Training und operative Entwicklung in Vorarlberg und der Alpenregion.','contactPage.hero':'Sprechen wir darüber, was in Ihrem Betrieb <span class="gold">wirklich passiert.</span>','contactPage.side':'Das erste Gespräch kann ganz einfach sein: Wo stehen Sie heute, was möchten Sie verbessern und wo verliert Ihr Betrieb derzeit Qualität oder Energie?',
+    'footer.f1':'F&B-Betrieb','footer.f2':'Training','footer.f3':'Servicestandards','footer.f4':'Eröffnungsvorbereitung',
+    'serviceCat.1':'01 / Betrieb','serviceCat.2':'02 / Eröffnung','serviceCat.3':'03 / Standards','serviceCat.4':'04 / Menschen','serviceCat.5':'05 / F&B','serviceCat.6':'06 / Entwicklung',
+    'loop.observe':'Beobachten','loop.feedback':'Rückmelden','loop.train':'Trainieren','loop.improve':'Verbessern',
+    'aria.nav':'Hauptnavigation','aria.language':'Sprachauswahl','aria.menu':'Menü',
+    'alt.team':'Team in der Hotellerie bei der Arbeit','alt.alpineHotel':'Luxuriöses Alpenhotel','alt.premiumBar':'Premium-Bar','alt.fineDining':'Gehobene Gastronomie','alt.restaurant':'Elegantes Restaurant','alt.operations':'Operativer Alltag in der Hotellerie','alt.hotelLobby':'Hotellobby','alt.barOperations':'Betrieb einer Premium-Bar','alt.diningDetail':'Detail gehobener Gastronomie','alt.teamService':'Team und Service','alt.serviceStandards':'Servicestandards',
+    'form.success':'Vielen Dank. Ihre Anfrage wurde gesendet.','form.error':'Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.','form.subject':'MB Hospitality & Management — neue Anfrage',
+    'notfound.title':'404 | MB Hospitality & Management','notfound.message':'Seite nicht gefunden','notfound.back':'Zur Startseite'
+  });
+
+  Object.assign(T.en, {
+    'common.alpine':'Alpine Hospitality',
+    'footer.copy':'Operational hospitality consulting, training and business development — directly inside your operation.',
+    'hero.eyebrow':'Vorarlberg · Alpine Hospitality',
+    'statement.quote':'Standards on paper are not enough. <em>We look at how they work in reality.</em>',
+    'diff.eyebrow':'On-site approach','diff.p1':'We step into the daily rhythm of your hotel, restaurant or bar. We observe the team, communication, service, organisation, leadership and the entire guest journey — under the same conditions in which your guest experiences your brand.','diff.p2':'Then we give concrete feedback, implement changes together and follow up on how they work in practice. The goal is not another document. The goal is better operations, a stronger team and a better guest experience.','diff.li2':'Feedback for leadership and team','diff.li3':'Implementation, training and follow-up',
+    'process.title':'Observe. Understand. Improve.','process.1t':'On-site analysis','process.2t':'Observation','process.3t':'Feedback','process.4t':'Implementation','process.5t':'Follow-up','journey.eyebrow':'Guest journey',
+    'service.1t':'F&B Management & Operations','service.2t':'Pre-Opening & Opening','service.3t':'Service Standards','service.4t':'Training & Team Development','service.5t':'Restaurant & Bar Development','service.6t':'Business Development',
+    'exp.title':'Experience built in practice.','exp.f1':'F&B Management & Operations','exp.f2':'Pre-Opening & Opening','exp.f3':'Restaurant & Bar Development','exp.f4':'Service Standards','exp.f5':'Training & Team Development','exp.f6':'Beverage & Bar Concepts','exp.f7':'Business Development','exp.f8':'Guest Experience',
+    'gallery.eyebrow':'Alpine Hospitality',
+    'footer.f1':'F&B Operations','footer.f2':'Training','footer.f3':'Service Standards','footer.f4':'Pre-Opening',
+    'serviceCat.1':'01 / Operations','serviceCat.2':'02 / Opening','serviceCat.3':'03 / Standards','serviceCat.4':'04 / People','serviceCat.5':'05 / F&B','serviceCat.6':'06 / Growth',
+    'loop.observe':'Observe','loop.feedback':'Feedback','loop.train':'Train','loop.improve':'Improve',
+    'aria.nav':'Main navigation','aria.language':'Language selection','aria.menu':'Menu',
+    'alt.team':'Hospitality team at work','alt.alpineHotel':'Luxury Alpine hotel','alt.premiumBar':'Premium bar','alt.fineDining':'Fine dining','alt.restaurant':'Elegant restaurant','alt.operations':'Hospitality operation','alt.hotelLobby':'Hotel lobby','alt.barOperations':'Premium bar operation','alt.diningDetail':'Fine dining detail','alt.teamService':'Team and service','alt.serviceStandards':'Service standards',
+    'form.success':'Thank you. Your enquiry has been sent.','form.error':'The message could not be sent. Please try again later.','form.subject':'MB Hospitality & Management — new enquiry',
+    'notfound.title':'404 | MB Hospitality & Management','notfound.message':'Page not found','notfound.back':'Back to home'
+  });
+
   const supported = ['hr','de','en'];
   const qsLang = new URLSearchParams(location.search).get('lang');
   let lang = supported.includes(qsLang) ? qsLang : (localStorage.getItem('mb_lang') || 'hr');
@@ -83,6 +207,7 @@
     });
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => el.setAttribute('placeholder', tr(el.dataset.i18nPlaceholder)));
     document.querySelectorAll('[data-i18n-aria]').forEach(el => el.setAttribute('aria-label', tr(el.dataset.i18nAria)));
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => el.setAttribute('alt', tr(el.dataset.i18nAlt)));
     document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
     const titleKey = document.body.dataset.titleKey;
     const metaKey = document.body.dataset.metaKey;
@@ -153,16 +278,16 @@
       if (!key) { status.textContent = tr('form.demo'); status.classList.add('show'); return; }
       const fd = new FormData(form);
       fd.append('access_key', key);
-      fd.append('subject', 'MB Hospitality & Management — novi upit');
+      fd.append('subject', tr('form.subject'));
       try {
         const r = await fetch('https://api.web3forms.com/submit',{method:'POST',body:fd});
         const data = await r.json();
         if (!data.success) throw new Error('submit failed');
         form.reset();
-        status.textContent = lang === 'de' ? 'Vielen Dank. Ihre Anfrage wurde gesendet.' : lang === 'en' ? 'Thank you. Your enquiry has been sent.' : 'Hvala. Vaš upit je poslan.';
+        status.textContent = tr('form.success');
         status.classList.add('show');
       } catch(err) {
-        status.textContent = lang === 'de' ? 'Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.' : lang === 'en' ? 'The message could not be sent. Please try again later.' : 'Poruka se nije mogla poslati. Pokušajte ponovno kasnije.';
+        status.textContent = tr('form.error');
         status.classList.add('show');
       }
     });
