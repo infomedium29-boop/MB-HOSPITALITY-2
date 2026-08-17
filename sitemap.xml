@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://YOUR-DOMAIN.example/</loc></url>
   <url><loc>https://YOUR-DOMAIN.example/usluge.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/hoteli.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/restorani.html</loc></url>
+  <url><loc>https://YOUR-DOMAIN.example/barovi.html</loc></url>
   <url><loc>https://YOUR-DOMAIN.example/pristup.html</loc></url>
   <url><loc>https://YOUR-DOMAIN.example/iskustvo.html</loc></url>
   <url><loc>https://YOUR-DOMAIN.example/kontakt.html</loc></url>

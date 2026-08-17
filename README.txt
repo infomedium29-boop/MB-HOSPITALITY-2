@@ -31,3 +31,8 @@ FOTOGRAFIJE
 
 NAPOMENA
 - Logo je izvučen iz screenshota koji je dostavljen u razgovoru i koristi se bez redizajna.
+
+
+PODSTRANICE
+- Usluge u navigaciji imaju premium dropdown: Hoteli / Restorani / Barovi.
+- Sve tri podstranice su potpuno prevedene na HR / DE / EN i dodane u sitemap.xml.

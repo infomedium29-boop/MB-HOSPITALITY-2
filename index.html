@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script defer src="assets/js/config.js"></script>
-  <script defer src="assets/js/app.js?v=20260817-i18n2"></script>
+  <script defer src="assets/js/app.js?v=20260817-sectors1"></script>
 </head>
 <body data-title-key="home.title" data-meta-key="home.meta">
   <div class="cinematic-intro" aria-hidden="true">
@@ -29,12 +29,19 @@
     <div class="nav-shell">
       <a class="brand" href="index.html" aria-label="MB Hospitality & Management"><img src="assets/img/logo.png" alt="MB Hospitality & Management"></a>
       <nav class="desktop-nav" aria-label="Glavna navigacija" data-i18n-aria="aria.nav">
-        <a class="active" href="index.html" data-i18n="nav.home">Početna</a>
-        <a href="usluge.html" data-i18n="nav.services">Usluge</a>
-        <a href="pristup.html" data-i18n="nav.approach">Naš pristup</a>
-        <a href="iskustvo.html" data-i18n="nav.experience">Iskustvo</a>
-        <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
-      </nav>
+  <a href="index.html" data-nav-page="index" data-i18n="nav.home">Početna</a>
+  <div class="nav-item nav-item--dropdown">
+    <a class="nav-parent" href="usluge.html" data-nav-page="usluge"><span data-i18n="nav.services">Usluge</span><span class="nav-caret" aria-hidden="true">⌄</span></a>
+    <div class="nav-dropdown" aria-label="Podstranice usluga" data-i18n-aria="aria.serviceSubnav">
+      <a href="hoteli.html" data-nav-page="hoteli"><span class="nav-dropdown__num">01</span><span data-i18n="nav.hotels">Hoteli</span></a>
+      <a href="restorani.html" data-nav-page="restorani"><span class="nav-dropdown__num">02</span><span data-i18n="nav.restaurants">Restorani</span></a>
+      <a href="barovi.html" data-nav-page="barovi"><span class="nav-dropdown__num">03</span><span data-i18n="nav.bars">Barovi</span></a>
+    </div>
+  </div>
+  <a href="pristup.html" data-nav-page="pristup" data-i18n="nav.approach">Naš pristup</a>
+  <a href="iskustvo.html" data-nav-page="iskustvo" data-i18n="nav.experience">Iskustvo</a>
+  <a href="kontakt.html" data-nav-page="kontakt" data-i18n="nav.contact">Kontakt</a>
+</nav>
       <div class="nav-actions">
         <div class="lang-switch" aria-label="Jezik" data-i18n-aria="aria.language">
           <button type="button" data-lang="hr">HR</button><button type="button" data-lang="de">DE</button><button type="button" data-lang="en">EN</button>
@@ -45,16 +52,21 @@
     </div>
   </header>
   <div class="mobile-menu">
-    <a href="index.html" data-i18n="nav.home">Početna</a>
-    <a href="usluge.html" data-i18n="nav.services">Usluge</a>
-    <a href="pristup.html" data-i18n="nav.approach">Naš pristup</a>
-    <a href="iskustvo.html" data-i18n="nav.experience">Iskustvo</a>
-    <a href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
-    <div class="lang-switch" aria-label="Jezik" data-i18n-aria="aria.language"><button type="button" data-lang="hr">HR</button><button type="button" data-lang="de">DE</button><button type="button" data-lang="en">EN</button></div>
-    <div class="mobile-menu__footer" data-i18n="common.location">Vorarlberg · Austrija</div>
+  <a href="index.html" data-nav-page="index" data-i18n="nav.home">Početna</a>
+  <div class="mobile-subnav">
+    <a class="mobile-subnav__parent" href="usluge.html" data-nav-page="usluge" data-i18n="nav.services">Usluge</a>
+    <div class="mobile-subnav__links">
+      <a href="hoteli.html" data-nav-page="hoteli" data-i18n="nav.hotels">Hoteli</a>
+      <a href="restorani.html" data-nav-page="restorani" data-i18n="nav.restaurants">Restorani</a>
+      <a href="barovi.html" data-nav-page="barovi" data-i18n="nav.bars">Barovi</a>
+    </div>
   </div>
-
-  <main>
+  <a href="pristup.html" data-nav-page="pristup" data-i18n="nav.approach">Naš pristup</a>
+  <a href="iskustvo.html" data-nav-page="iskustvo" data-i18n="nav.experience">Iskustvo</a>
+  <a href="kontakt.html" data-nav-page="kontakt" data-i18n="nav.contact">Kontakt</a>
+  <div class="lang-switch" aria-label="Jezik" data-i18n-aria="aria.language"><button type="button" data-lang="hr">HR</button><button type="button" data-lang="de">DE</button><button type="button" data-lang="en">EN</button></div>
+  <div class="mobile-menu__footer" data-i18n="common.location">Vorarlberg · Austrija</div>
+</div><main>
     <section class="hero">
       <div class="hero__media">
         <div class="hero__bg" style="background-image:url('https://images.unsplash.com/photo-1766832255363-c9f060ade8b0?fit=crop&fm=webp&q=82&w=2400')"></div>
@@ -153,7 +165,7 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="assets/img/logo.png" alt="MB Hospitality & Management"><p data-i18n="footer.copy">Operativni hospitality consulting, trening i business development izravno u vašem objektu.</p></div><div class="footer-col"><h4 data-i18n="footer.nav">Navigacija</h4><a href="usluge.html" data-i18n="nav.services">Usluge</a><a href="pristup.html" data-i18n="nav.approach">Naš pristup</a><a href="iskustvo.html" data-i18n="nav.experience">Iskustvo</a><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></div><div class="footer-col"><h4 data-i18n="footer.focus">Fokus</h4><span data-i18n="footer.f1">F&B operacije</span><span data-i18n="footer.f2">Trening</span><span data-i18n="footer.f3">Standardi usluge</span><span data-i18n="footer.f4">Priprema otvaranja</span></div><div class="footer-col"><h4 data-i18n="footer.location">Lokacija</h4><span data-i18n="common.location">Vorarlberg · Austrija</span><a href="#" data-instagram-link data-i18n="footer.instagram">Instagram uskoro</a></div></div><div class="footer-bottom"><span>© 2026 MB Hospitality & Management. <span data-i18n="footer.rights">Sva prava pridržana.</span></span><a href="privatnost.html" data-i18n="footer.privacy">Privatnost</a></div></div></footer>
+  <footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><img src="assets/img/logo.png" alt="MB Hospitality & Management"><p data-i18n="footer.copy">Operativni hospitality consulting, trening i business development izravno u vašem objektu.</p></div><div class="footer-col"><h4 data-i18n="footer.nav">Navigacija</h4><a href="usluge.html" data-i18n="nav.services">Usluge</a><a class="footer-sub" href="hoteli.html" data-i18n="nav.hotels">Hoteli</a><a class="footer-sub" href="restorani.html" data-i18n="nav.restaurants">Restorani</a><a class="footer-sub" href="barovi.html" data-i18n="nav.bars">Barovi</a><a href="pristup.html" data-i18n="nav.approach">Naš pristup</a><a href="iskustvo.html" data-i18n="nav.experience">Iskustvo</a><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></div><div class="footer-col"><h4 data-i18n="footer.focus">Fokus</h4><span data-i18n="footer.f1">F&B operacije</span><span data-i18n="footer.f2">Trening</span><span data-i18n="footer.f3">Standardi usluge</span><span data-i18n="footer.f4">Priprema otvaranja</span></div><div class="footer-col"><h4 data-i18n="footer.location">Lokacija</h4><span data-i18n="common.location">Vorarlberg · Austrija</span><a href="#" data-instagram-link data-i18n="footer.instagram">Instagram uskoro</a></div></div><div class="footer-bottom"><span>© 2026 MB Hospitality & Management. <span data-i18n="footer.rights">Sva prava pridržana.</span></span><a href="privatnost.html" data-i18n="footer.privacy">Privatnost</a></div></div></footer>
 
   <div class="cookie-bar"><p data-i18n="cookie.text">Koristimo samo osnovne lokalne postavke potrebne za jezik i iskustvo stranice. Nema marketinških kolačića u ovoj verziji.</p><div class="cookie-actions"><button type="button" data-cookie-ok data-i18n="cookie.ok">U redu</button><a class="btn btn--ghost" style="min-height:auto;padding:7px 11px;font-size:.65rem" href="privatnost.html" data-i18n="cookie.more">Privatnost</a></div></div>
 </body>
