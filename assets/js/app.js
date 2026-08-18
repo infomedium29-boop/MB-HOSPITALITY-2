@@ -535,11 +535,37 @@
   // mobile menu
   const menuBtn = document.querySelector('.menu-btn');
   const mobileMenu = document.querySelector('.mobile-menu');
-  function closeMenu(){ mobileMenu?.classList.remove('open'); document.body.classList.remove('menu-open'); menuBtn?.setAttribute('aria-expanded','false'); }
+  const mobileServiceSubnav = mobileMenu?.querySelector('.mobile-subnav');
+  const mobileServiceToggle = mobileMenu?.querySelector('.mobile-subnav__toggle');
+  const mobileServiceLinks = mobileMenu?.querySelector('.mobile-subnav__links');
+
+  function setMobileServiceSubnav(open){
+    if (!mobileServiceSubnav || !mobileServiceToggle || !mobileServiceLinks) return;
+    mobileServiceSubnav.classList.toggle('open', !!open);
+    mobileServiceToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    mobileServiceLinks.setAttribute('aria-hidden', open ? 'false' : 'true');
+  }
+
+  // If the visitor is already on a hotel / restaurant / bar page, keep its group open.
+  setMobileServiceSubnav(currentPage === 'usluge' || sectorPages.includes(currentPage));
+
+  mobileServiceToggle?.addEventListener('click', e => {
+    e.preventDefault();
+    e.stopPropagation();
+    setMobileServiceSubnav(!mobileServiceSubnav?.classList.contains('open'));
+  });
+
+  function closeMenu(){
+    mobileMenu?.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    menuBtn?.setAttribute('aria-expanded','false');
+    if (!(currentPage === 'usluge' || sectorPages.includes(currentPage))) setMobileServiceSubnav(false);
+  }
   menuBtn?.addEventListener('click', () => {
     const open = mobileMenu?.classList.toggle('open');
     document.body.classList.toggle('menu-open', !!open);
     menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open && (currentPage === 'usluge' || sectorPages.includes(currentPage))) setMobileServiceSubnav(true);
   });
   mobileMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 
