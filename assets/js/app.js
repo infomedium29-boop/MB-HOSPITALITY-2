@@ -569,19 +569,6 @@
   });
   mobileMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 
-  // cinematic intro on first home visit per session
-  const intro = document.querySelector('.cinematic-intro');
-  if (intro) {
-    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const seen = sessionStorage.getItem('mb_intro_seen');
-    const hideIntro = () => { intro.classList.add('hidden'); sessionStorage.setItem('mb_intro_seen','1'); setTimeout(()=>intro.remove(),800); };
-    if (reduced || seen) { intro.remove(); }
-    else {
-      intro.querySelector('.intro-skip')?.addEventListener('click', hideIntro);
-      setTimeout(hideIntro, 10000);
-    }
-  }
-
   // scroll reveal
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
@@ -624,6 +611,144 @@
   const cookie = document.querySelector('.cookie-bar');
   if (cookie && !localStorage.getItem('mb_notice_ok')) cookie.classList.add('show');
   cookie?.querySelector('[data-cookie-ok]')?.addEventListener('click',()=>{localStorage.setItem('mb_notice_ok','1');cookie.classList.remove('show')});
+
+
+  // Performance: lazy decorative CSS backgrounds only when they approach the viewport.
+  const lazyBackgrounds = [...document.querySelectorAll('[data-bg-small][data-bg-large]')];
+  const loadBackground = el => {
+    if (el.dataset.bgLoaded === '1') return;
+    const useLarge = matchMedia('(min-width: 901px)').matches;
+    const src = useLarge ? el.dataset.bgLarge : el.dataset.bgSmall;
+    if (!src) return;
+    el.style.backgroundImage = `url("${src}")`;
+    el.dataset.bgLoaded = '1';
+  };
+  if ('IntersectionObserver' in window) {
+    const bgObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          loadBackground(entry.target);
+          bgObserver.unobserve(entry.target);
+        }
+      });
+    }, {rootMargin:'320px 0px'});
+    lazyBackgrounds.forEach(el => bgObserver.observe(el));
+  } else {
+    lazyBackgrounds.forEach(loadBackground);
+  }
+
+  // Performance: one responsive hero image is enough on mobile. On larger screens,
+  // load the extra cinematic slides only after the critical page load is complete.
+  const homeHero = document.querySelector('.hero');
+  const extraHeroSlides = [...document.querySelectorAll('.hero__bg--secondary[data-bg-desktop]')];
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const saveData = !!navigator.connection?.saveData;
+  const canRunHeroSlideshow = matchMedia('(min-width: 901px)').matches && !reducedMotion && !saveData;
+  if (homeHero && extraHeroSlides.length && canRunHeroSlideshow) {
+    const prepareHeroSlideshow = () => {
+      const jobs = extraHeroSlides.map(el => new Promise(resolve => {
+        const src = el.dataset.bgDesktop;
+        const probe = new Image();
+        probe.decoding = 'async';
+        probe.onload = () => { el.style.backgroundImage = `url("${src}")`; resolve(); };
+        probe.onerror = () => resolve();
+        probe.src = src;
+      }));
+      Promise.all(jobs).then(() => homeHero.classList.add('hero--slideshow'));
+    };
+    const schedule = () => {
+      if ('requestIdleCallback' in window) requestIdleCallback(prepareHeroSlideshow, {timeout:3000});
+      else setTimeout(prepareHeroSlideshow, 1200);
+    };
+    if (document.readyState === 'complete') schedule();
+    else addEventListener('load', schedule, {once:true});
+  }
+
+
+
+  // Client-required 10 second cinematic intro.
+  // Performance strategy: one full-screen IMG only, next frame is prefetched just before each cut,
+  // then the same element becomes the final hero visual. No 4–7 simultaneous 2200px background downloads.
+  const introStage = document.querySelector('.hero-intro');
+  const introVisual = document.querySelector('[data-intro-visual]');
+  if (introStage && introVisual) {
+    const reducedIntro = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const alreadySeenIntro = sessionStorage.getItem('mb_intro_seen') === '1';
+    const endIntro = () => {
+      if (introStage.dataset.done === '1') return;
+      introStage.dataset.done = '1';
+      introStage.classList.remove('logo-phase');
+      introStage.classList.add('ended');
+      document.body.classList.remove('intro-active');
+      sessionStorage.setItem('mb_intro_seen','1');
+      setTimeout(() => introStage.remove(), 850);
+    };
+
+    if (reducedIntro || alreadySeenIntro) {
+      document.body.classList.remove('intro-active');
+      introStage.remove();
+      // For repeat visits in the same session, land directly on the Alpine hero.
+      const w = innerWidth <= 900 ? 960 : 1600;
+      const q = innerWidth <= 900 ? 68 : 72;
+      introVisual.removeAttribute('srcset');
+      introVisual.src = `https://images.unsplash.com/photo-1781456651358-9b627372d6cf?fit=crop&fm=webp&q=${q}&w=${w}`;
+    } else {
+      const mobile = innerWidth <= 900;
+      const width = mobile ? 960 : 1600;
+      const quality = mobile ? 68 : 72;
+      const u = id => `https://images.unsplash.com/${id}?fit=crop&fm=webp&q=${quality}&w=${width}`;
+      const frames = [
+        u('photo-1759038086397-2b7b1535da04'), // luxury hotel / lobby
+        u('photo-1781456651358-9b627372d6cf'), // Alpine hospitality / mountains
+        u('photo-1783496116776-2f286d05e7f2'), // restaurant / table detail
+        u('photo-1766832255363-c9f060ade8b0'), // bar / cocktail atmosphere
+        u('photo-1785960862202-169ad89e3469'), // service / people at work
+        u('photo-1781456651358-9b627372d6cf')  // settle on Alpine hero before logo
+      ];
+      const cuts = [1600,3200,4800,6400,7700];
+      const timers = [];
+      const prefetched = new Map();
+
+      const prefetch = src => {
+        if (prefetched.has(src)) return prefetched.get(src);
+        const p = new Promise(resolve => {
+          const im = new Image();
+          im.decoding = 'async';
+          im.onload = () => resolve(src);
+          im.onerror = () => resolve(src);
+          im.src = src;
+        });
+        prefetched.set(src,p);
+        return p;
+      };
+      const cutTo = async src => {
+        await prefetch(src);
+        if (introStage.dataset.done === '1') return;
+        introVisual.classList.remove('intro-cut-active');
+        introVisual.classList.add('intro-cut');
+        introVisual.removeAttribute('srcset');
+        introVisual.src = src;
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          introVisual.classList.remove('intro-cut');
+          introVisual.classList.add('intro-cut-active');
+        }));
+      };
+
+      // Prefetch only the next scene ~600 ms before it is needed.
+      frames.slice(1).forEach((src,i) => {
+        timers.push(setTimeout(() => prefetch(src), Math.max(250, cuts[i]-650)));
+        timers.push(setTimeout(() => cutTo(src), cuts[i]));
+      });
+      timers.push(setTimeout(() => introStage.classList.add('logo-phase'), 8000));
+      timers.push(setTimeout(endIntro, 10000));
+      introStage.querySelector('.hero-intro__skip')?.addEventListener('click', () => {
+        timers.forEach(clearTimeout);
+        endIntro();
+      });
+    }
+  } else {
+    document.body.classList.remove('intro-active');
+  }
 
   applyLanguage(lang, false);
 })();

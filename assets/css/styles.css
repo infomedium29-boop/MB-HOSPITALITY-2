@@ -65,23 +65,6 @@ img{display:block;max-width:100%}
 .mobile-menu .lang-switch{margin-top:20px}
 .mobile-menu__footer{position:absolute;bottom:30px;color:var(--muted-2);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase}
 
-/* intro */
-.cinematic-intro{position:fixed;inset:0;z-index:120;background:#030302;overflow:hidden;transition:opacity .7s ease,visibility .7s ease}
-.cinematic-intro.hidden{opacity:0;visibility:hidden;pointer-events:none}
-.intro-frame{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.05);filter:saturate(.72) brightness(.62) contrast(1.08);animation:introFrame 10s linear forwards}
-.intro-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.5))}
-.intro-frame:nth-child(1){animation-delay:0s}
-.intro-frame:nth-child(2){animation-delay:2s}
-.intro-frame:nth-child(3){animation-delay:4s}
-.intro-frame:nth-child(4){animation-delay:6s}
-@keyframes introFrame{0%{opacity:0;transform:scale(1.06)}5%{opacity:1}18%{opacity:1}24%{opacity:0;transform:scale(1)}100%{opacity:0}}
-.intro-logo{position:absolute;inset:0;display:grid;place-items:center;background:#050504;opacity:0;animation:introLogo 10s linear forwards;animation-delay:0s}
-.intro-logo img{width:min(780px,82vw);filter:drop-shadow(0 10px 30px rgba(0,0,0,.4))}
-@keyframes introLogo{0%,78%{opacity:0}82%,97%{opacity:1}100%{opacity:0}}
-.intro-skip{position:absolute;right:24px;bottom:24px;z-index:3;border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.3);color:#ddd8cf;border-radius:999px;padding:10px 14px;font-size:.7rem;letter-spacing:.11em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(10px)}
-.intro-progress{position:absolute;left:0;bottom:0;height:2px;background:var(--gold);animation:introProgress 10s linear forwards;z-index:3}
-@keyframes introProgress{from{width:0}to{width:100%}}
-
 /* hero */
 .hero{min-height:100dvh;position:relative;display:grid;align-items:end;overflow:hidden;padding:150px 0 82px;background:#050504}
 .hero__media{position:absolute;inset:0;overflow:hidden}
@@ -235,9 +218,8 @@ img{display:block;max-width:100%}
   .detail-row{grid-template-columns:1fr;padding:26px}.detail-row p{grid-column:auto}.detail-row__num{font-size:2.2rem}
   .form-grid{grid-template-columns:1fr}.field--full{grid-column:auto}.contact-form{padding:24px}
   .footer-grid{grid-template-columns:1fr}.footer-brand,.footer-col:last-child{grid-column:auto}.footer-bottom{flex-direction:column}
-  .intro-skip{right:14px;bottom:14px}.intro-logo img{width:92vw}
 }
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.cinematic-intro{display:none}.reveal{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
 
 
 /* sector navigation + sector pages */
@@ -555,4 +537,98 @@ img{display:block;max-width:100%}
 @media (max-width:900px){
   .statement--clean > div:first-child{padding-top:0}
   .statement--clean .muted{max-width:620px}
+}
+
+
+/* 2026-08-18 final performance pass
+   - immediate responsive LCP image
+   - desktop-only deferred hero slideshow
+   - lazy decorative backgrounds
+   - no blocking cinematic overlay on first mobile load */
+img.hero__bg{
+  width:106%;
+  height:106%;
+  object-fit:cover;
+  object-position:center;
+}
+.hero__bg--primary{
+  opacity:1;
+  animation:none;
+  transform:scale(1.04);
+}
+.hero__bg--secondary{
+  opacity:0;
+  animation:none;
+  background-size:cover;
+  background-position:center;
+}
+.hero.hero--slideshow .hero__bg--primary{
+  animation:heroPrimary 24s linear infinite;
+}
+.hero.hero--slideshow .hero__bg--secondary:nth-child(2){
+  animation:heroCrossfade 24s linear infinite;
+  animation-delay:8s;
+}
+.hero.hero--slideshow .hero__bg--secondary:nth-child(3){
+  animation:heroCrossfade 24s linear infinite;
+  animation-delay:16s;
+}
+@keyframes heroPrimary{
+  0%,31%{opacity:1;transform:scale(1.06)}
+  41%,100%{opacity:0;transform:scale(1.01)}
+}
+.page-hero__img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.sector-page-hero .page-hero__img{object-position:center 55%}
+.lazy-bg{background-color:#0b0a08}
+@media (max-width:900px){
+  .hero__bg--secondary{display:none!important}
+  .hero__bg--primary{opacity:1!important;animation:none!important;transform:scale(1.025)}
+}
+
+
+/* 2026-08-18 — client-required 10s cinematic intro, optimized as part of the hero.
+   Important: no separate page-sized image overlay. The same critical hero image element
+   is visible from the first paint and changes through the intro sequence. */
+.hero{isolation:isolate}
+.hero__media{z-index:0}
+.hero__media::before,.hero__media::after{transition:opacity .7s ease}
+.hero-intro{position:absolute;inset:0;z-index:12;pointer-events:none;display:block}
+.hero-intro__logo{position:absolute;inset:0;display:grid;place-items:center;background:#050504;opacity:0;visibility:hidden;transition:opacity .38s ease,visibility .38s ease;padding:clamp(24px,5vw,70px)}
+.hero-intro__logo img{width:min(800px,84vw);height:auto;filter:drop-shadow(0 12px 38px rgba(0,0,0,.42))}
+.hero-intro.logo-phase .hero-intro__logo{opacity:1;visibility:visible}
+.hero-intro__skip{position:absolute;right:max(18px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));z-index:3;pointer-events:auto;border:1px solid rgba(225,189,113,.34);background:rgba(4,4,3,.46);color:#e4ded5;border-radius:999px;padding:11px 16px;font:600 .66rem/1 var(--sans);letter-spacing:.13em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(12px);transition:border-color .25s ease,background .25s ease,color .25s ease}
+.hero-intro__skip:hover{border-color:rgba(225,189,113,.72);background:rgba(201,155,62,.12);color:#fff}
+.hero-intro__progress{position:absolute;left:0;bottom:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-2));box-shadow:0 0 18px rgba(201,155,62,.32)}
+body.intro-active .hero-intro__progress{animation:mbIntroProgress 10s linear forwards}
+@keyframes mbIntroProgress{from{width:0}to{width:100%}}
+
+/* The intro is first. Navigation and copy fade in only after it ends. */
+.site-header{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.hero__content,.hero__meta,.scroll-cue{transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1)}
+body.intro-active .site-header{opacity:0;transform:translateY(-14px);pointer-events:none}
+body.intro-active .hero__content,body.intro-active .hero__meta,body.intro-active .scroll-cue{opacity:0;transform:translateY(18px);pointer-events:none}
+body.intro-active .cookie-bar{opacity:0!important;pointer-events:none!important}
+body.intro-active .hero__media::before{opacity:.55}
+body.intro-active .hero__media::after{opacity:.25}
+
+/* Subtle film movement on the single image element. Switching sources does not create
+   multiple simultaneous full-resolution background requests. */
+body.intro-active .hero__bg--primary{animation:mbIntroKenBurns 1.65s ease-out both;transform-origin:center center}
+body.intro-active .hero__bg--primary.intro-cut{animation:none}
+body.intro-active .hero__bg--primary.intro-cut-active{animation:mbIntroKenBurns 1.65s ease-out both}
+@keyframes mbIntroKenBurns{from{transform:scale(1.055);filter:saturate(.68) brightness(.48) contrast(1.08)}to{transform:scale(1.018);filter:saturate(.74) brightness(.56) contrast(1.08)}}
+.hero-intro.ended{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .7s ease,visibility .7s ease}
+
+@media (max-width:900px){
+  .hero-intro__skip{right:18px;bottom:18px;padding:10px 14px}
+  .hero-intro__logo img{width:min(88vw,620px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero-intro{display:none!important}
+  body.intro-active .site-header,body.intro-active .hero__content,body.intro-active .hero__meta,body.intro-active .scroll-cue{opacity:1;transform:none;pointer-events:auto}
 }
