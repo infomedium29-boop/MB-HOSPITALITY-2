@@ -401,3 +401,89 @@ img{display:block;max-width:100%}
   .mobile-subnav.open .mobile-subnav__links{margin-top:8px}
   .mobile-menu .mobile-subnav__links a{padding-top:9px;padding-bottom:9px}
 }
+
+/* 2026-08-18 polish: centered premium hero, chevron mobile subnav, balanced cookie actions */
+.hero__content{
+  margin-inline:auto;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.hero .eyebrow{justify-content:center}
+.hero .display{margin-inline:auto}
+.hero__sub{margin-left:auto;margin-right:auto}
+.hero__actions{justify-content:center}
+
+@media (max-width:900px){
+  .mobile-subnav__toggle::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:47%;
+    width:9px;
+    height:9px;
+    background:transparent;
+    border-right:1.5px solid var(--gold-2);
+    border-bottom:1.5px solid var(--gold-2);
+    transform:translate(-50%,-60%) rotate(45deg);
+    transition:transform .25s ease,top .25s ease;
+  }
+  .mobile-subnav__toggle::after{display:none}
+  .mobile-subnav.open .mobile-subnav__toggle::before{
+    top:54%;
+    transform:translate(-50%,-45%) rotate(225deg);
+  }
+}
+
+.cookie-actions{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  align-items:stretch;
+}
+.cookie-actions button,
+.cookie-actions .btn{
+  width:100%!important;
+  min-width:0;
+  min-height:48px!important;
+  height:48px;
+  padding:0 16px!important;
+  margin:0;
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--sans);
+  font-size:.68rem!important;
+  font-weight:700;
+  line-height:1;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.cookie-actions button:first-child{
+  background:var(--gold);
+  color:#080706;
+  border:1px solid var(--gold);
+}
+.cookie-actions .btn--ghost{
+  background:transparent;
+  color:#eee8dd;
+  border:1px solid var(--gold);
+  backdrop-filter:none;
+}
+.cookie-actions .btn--ghost:hover{
+  background:rgba(201,155,62,.09);
+  color:var(--gold-2);
+}
+
+@media (max-width:620px){
+  .hero{align-items:center;padding-top:132px;padding-bottom:64px}
+  .hero__content{padding-bottom:0}
+  .hero .eyebrow{width:100%;justify-content:center;text-align:center}
+  .hero .eyebrow::before{display:none}
+  .hero .display{max-width:100%;text-align:center}
+  .hero__sub{text-align:center;max-width:34rem}
+  .hero__actions{width:100%;justify-content:center}
+  .cookie-bar{left:12px;bottom:12px;width:calc(100vw - 24px);padding:18px}
+}
