@@ -538,3 +538,21 @@ img{display:block;max-width:100%}
     font-size:.91rem;
   }
 }
+
+
+/* Premium section hierarchy cleanup — 2026-08-18
+   Decorative micro-labels were removed from inner sections so each block
+   opens directly with its main message. These rules tighten the new rhythm
+   without making the layout feel compressed. */
+.statement--clean > div:first-child{padding-top:.3rem}
+.statement--clean .muted{margin:0;max-width:390px;line-height:1.85;font-size:1rem}
+.sector-crosshead--clean{display:block}
+.sector-crosshead--clean .h3{max-width:780px}
+.section .split__copy>.h2:first-child,
+.section .reveal>.h2:first-child,
+.sector-statement__inner>.h2:first-child,
+.cta-box>.h2:first-child{margin-top:0}
+@media (max-width:900px){
+  .statement--clean > div:first-child{padding-top:0}
+  .statement--clean .muted{max-width:620px}
+}
