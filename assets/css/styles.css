@@ -487,3 +487,54 @@ img{display:block;max-width:100%}
   .hero__actions{width:100%;justify-content:center}
   .cookie-bar{left:12px;bottom:12px;width:calc(100vw - 24px);padding:18px}
 }
+
+/* 2026-08-18 hero mobile spacing refinement: premium breathing room */
+.hero__content{
+  width:min(1080px,var(--container));
+}
+
+@media (max-width:620px){
+  .hero{
+    padding-top:128px;
+    padding-bottom:70px;
+  }
+  .hero__content{
+    width:min(510px,calc(100% - 48px));
+    margin-inline:auto;
+  }
+  .hero .display{
+    max-width:500px;
+    font-size:clamp(2.95rem,12.3vw,4.35rem);
+    line-height:.94;
+    letter-spacing:-.032em;
+    text-wrap:balance;
+  }
+  .hero__sub{
+    max-width:470px;
+    margin-top:24px;
+    font-size:.94rem;
+    line-height:1.72;
+    text-wrap:pretty;
+  }
+  .hero__actions{
+    width:min(100%,460px);
+    margin-top:30px;
+    gap:12px;
+  }
+  .hero__actions .btn{
+    min-height:54px;
+    padding-inline:22px;
+  }
+}
+
+@media (max-width:390px){
+  .hero__content{
+    width:calc(100% - 36px);
+  }
+  .hero .display{
+    font-size:clamp(2.75rem,13.2vw,3.55rem);
+  }
+  .hero__sub{
+    font-size:.91rem;
+  }
+}
