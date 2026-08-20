@@ -36,3 +36,6 @@ NAPOMENA
 PODSTRANICE
 - Usluge u navigaciji imaju premium dropdown: Hoteli / Restorani / Barovi.
 - Sve tri podstranice su potpuno prevedene na HR / DE / EN i dodane u sitemap.xml.
+
+
+2026-08-20 revision: authentic client-provided AVIF photography is stored under assets/img/editorial/. Founder and professional-experience content added in HR/DE/EN.
