@@ -687,3 +687,24 @@ img{display:block;max-width:100%}
   .experience-path__item::before{top:22px;left:-21px;width:8px;height:8px}
   .experience-path__item small{font-size:.58rem}.experience-path__item strong{font-size:1.5rem}
 }
+
+
+/* 2026-08-21 — final professional experience hierarchy */
+.professional-experience-label{margin-bottom:14px}
+.professional-experience-list{border-top:1px solid rgba(195,157,101,.28);margin-top:4px}
+.professional-experience-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;padding:19px 0;border-bottom:1px solid rgba(255,255,255,.075);transition:border-color .25s ease,transform .25s ease}
+.professional-experience-row:hover{border-color:rgba(195,157,101,.42);transform:translateX(3px)}
+.professional-experience-name{font-family:var(--serif);font-size:clamp(1.35rem,2vw,1.95rem);line-height:1.08;color:#eee8de;font-weight:500}
+.professional-experience-rating{display:inline-flex;align-items:center;justify-content:flex-end;gap:8px;color:var(--gold-2);font-size:.82rem;letter-spacing:.13em;white-space:nowrap;text-shadow:none}
+.professional-experience-rating--superior small{font-family:var(--sans);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:#bcb4a6}
+.professional-experience-row--designation{padding-top:15px;padding-bottom:15px;background:linear-gradient(90deg,rgba(195,157,101,.055),transparent 82%)}
+.professional-experience-row--designation .professional-experience-name{font-size:clamp(1.12rem,1.65vw,1.55rem);color:var(--gold-2)}
+.professional-experience-context{font-size:.64rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#a9a296;text-align:right;white-space:nowrap}
+.professional-experience-summary{font-family:var(--serif);font-size:clamp(1.45rem,2.25vw,2.1rem);line-height:1.2;color:#ded7cb;margin:32px 0 0;padding:2px 0 2px 22px;border-left:1px solid var(--gold);max-width:800px}
+.professional-experience-summary + .experience-disclaimer{margin-top:24px}
+@media (max-width:680px){
+  .professional-experience-row{grid-template-columns:1fr;gap:8px;padding:17px 0;align-items:start}
+  .professional-experience-rating{justify-content:flex-start;font-size:.78rem}
+  .professional-experience-context{text-align:left;white-space:normal}
+  .professional-experience-summary{font-size:1.42rem;padding-left:16px;margin-top:28px}
+}

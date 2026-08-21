@@ -554,6 +554,27 @@
     'path.eyebrow':'Professional development','path.title':'The path that shaped the experience.','path.lead':'More than 20 years of knowledge were built through real roles, projects, education and F&B practice — without presenting it as a traditional CV.','path.1':'Hotels','path.2':'Management','path.3':'Education','path.4':'Projects','path.5':'Certifications','path.6':'F&B','path.7':'Consulting','alt.alpineEditorial':'Premium Alpine hospitality property in a mountain setting'
   });
 
+
+  // 2026-08-21 — final professional experience details
+  Object.assign(T.hr, {
+    'professionalExperience.title':'Profesionalno iskustvo',
+    'professionalExperience.austria':'Austrija',
+    'professionalExperience.summary':'Više od 20 godina iskustva stečeno je u međunarodnim hotelskim sustavima, 4- i 5-zvjezdanim hotelima te restoranima i barovima u Hrvatskoj i Austriji.',
+    'experiencePage.meta':'20+ godina profesionalnog hospitality i F&B iskustva Zorana Kušljića u međunarodnim hotelskim sustavima, 4★ i 5★ hotelima, Austriji i Hrvatskoj, uz pre-opening, opening, training i razvoj operacija.'
+  });
+  Object.assign(T.de, {
+    'professionalExperience.title':'Berufliche Erfahrung',
+    'professionalExperience.austria':'Österreich',
+    'professionalExperience.summary':'Mehr als 20 Jahre Erfahrung wurden in internationalen Hotelsystemen, 4- und 5-Sterne-Hotels sowie in Restaurants und Bars in Kroatien und Österreich gesammelt.',
+    'experiencePage.meta':'20+ Jahre professionelle Hospitality- und F&B-Erfahrung von Zoran Kušljić in internationalen Hotelsystemen, 4★- und 5★-Hotels, Österreich und Kroatien sowie in Pre-Opening, Opening, Training und Betriebsentwicklung.'
+  });
+  Object.assign(T.en, {
+    'professionalExperience.title':'Professional Experience',
+    'professionalExperience.austria':'Austria',
+    'professionalExperience.summary':'More than 20 years of experience has been built within international hotel systems, 4- and 5-star hotels, as well as restaurants and bars in Croatia and Austria.',
+    'experiencePage.meta':'20+ years of professional hospitality and F&B experience of Zoran Kušljić across international hotel systems, 4★ and 5★ hotels, Austria and Croatia, including pre-opening, opening, training and operational development.'
+  });
+
   const supported = ['hr','de','en'];
   const qsLang = new URLSearchParams(location.search).get('lang');
   let lang = supported.includes(qsLang) ? qsLang : (localStorage.getItem('mb_lang') || 'hr');
